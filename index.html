@@ -5,114 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects Directory</title>
 <link rel="stylesheet" href="style.css">
-<style>
-    /* Custom Grid for the Business Card Interface */
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        width: 100%;
-        max-width: 1000px;
-        margin-top: 20px;
-    }
-
-    .project-card {
-        /* Inherits from your .footer-block, with added hover effects */
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        justify-content: space-between;
-    }
-
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.8);
-        border-color: #555;
-    }
-
-    .project-card h2 {
-        margin: 0 0 10px 0;
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .project-card p {
-        color: #ccc;
-        font-size: 14px;
-        line-height: 1.5;
-        margin: 0 0 20px 0;
-    }
-/* --- PAGE CURL EFFECT --- */
-.page-curl {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 65px;
-    height: 65px;
-    z-index: 10000; /* Ensures it sits above your header */
-    transition: width 0.3s ease, height 0.3s ease;
-    text-decoration: none;
-    /* Applies a shadow to the custom clipped shapes */
-    filter: drop-shadow(-3px 3px 6px rgba(0,0,0,0.5)); 
-}
-
-.page-curl:hover {
-    width: 140px;
-    height: 140px;
-}
-
-/* The colorful layer hiding underneath */
-.curl-reveal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #3498db; /* Uses your primary button blue */
-    /* Slices the div into a top-right triangle */
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    transition: background 0.3s ease;
-}
-
-.page-curl:hover .curl-reveal {
-    background: #2980b9; /* Darkens slightly on hover */
-}
-
-/* The text inside the fold */
-.curl-reveal span {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    color: white;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transform: rotate(45deg);
-    opacity: 0;
-    transition: opacity 0.2s ease, top 0.3s ease, right 0.3s ease, font-size 0.3s ease;
-}
-
-.page-curl:hover .curl-reveal span {
-    opacity: 1;
-    top: 45px;
-    right: 20px;
-    font-size: 18px;
-}
-
-/* The "back" of the folded paper */
-.curl-flap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    /* Dark gradient to simulate lighting on the back of the peel */
-    background: linear-gradient(135deg, #555 0%, #222 100%); 
-    /* Slices the div into the opposing bottom-left triangle */
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
-    border-bottom-left-radius: 6px; /* Softens the sharp folded tip */
-}
-    
-</style>
 </head>
 <body>
 <a href="tools.html" class="page-curl" aria-label="Game Tools">
@@ -136,66 +28,65 @@
 
 <div class="content-wrapper">
     <main class="main">
-        
-        <div class="projects-grid">
-            
-            <div class="footer-block project-card">
-                <div>
-                    <h2>Tri-Fold Standees</h2>
-                    <p>A comprehensive web application for generating printable trifold paper miniatures. Features a real-time editor, dark-mode UI, and stat tracking for tabletop encounters.</p>
-                </div>
-                <button class="primary" onclick="window.location.href='https://trifold.gameportal.win/'">Launch App</button>
+        <div class="status-section">
+    <h2 class="status-header release-header">Release <span>Stable & Ready</span></h2>
+    <div class="projects-grid">
+        <div class="footer-block project-card">
+            <div>
+                <h2>Tri-Fold Standees</h2>
+                <p>A comprehensive web application for generating printable trifold paper miniatures. Features a real-time editor, dark-mode UI, and stat tracking.</p>
             </div>
-            
-            <div class="footer-block project-card">
-                <div>
-                    <h2>Initiative Standees (beta)</h2>
-                    <p>A comprehensive web application for generating free-standing (or DM screen tent) printable initiative tracking items for tabletop encounters.</p>
-                </div>
-                <button class="primary" onclick="window.location.href='https://init-tents.gameportal.win/'">Launch App</button>
-            </div>
-
-            <div class="footer-block project-card">
-                <div>
-                    <h2>Traveller 5e Toolkit (in Ideation)</h2>
-                    <p>A suite of utilities and scripts designed to streamline character creation and automate sector mapping for the Traveller role-playing game.</p>
-                </div>
-                <button class="primary word-btn" onclick="window.location.href='#'">View Repository</button>
-            </div>
-
-            <div class="footer-block project-card">
-                <div>
-                    <h2>The X Factor / More Feats!</h2>
-                    <p>Two optional tweaks for getting more feats in your player's hands!</p>
-                </div>
-                <button class="primary" target="_blank" onclick="window.location.href='https://homebrewery.naturalcrit.com/share/rS9ggBRGFQz_'">Open HomeBrew</button>
-            </div>
-
-            <div class="footer-block project-card">
-                <div>
-                    <h2>The X Factor / More Feats!</h2>
-                    <p>Two optional tweaks for getting more feats in your player's hands!</p>
-                </div>
-                <button class="primary" target="_blank" onclick="window.location.href='https://homebrewery.naturalcrit.com/share/rS9ggBRGFQz_'">Open HomeBrew</button>
-            </div>
-
-            <div class="footer-block project-card">
-                <div>
-                    <h2>Traveller 5e Toolkit (in Ideation)</h2>
-                    <p>A suite of utilities and scripts designed to streamline character creation and automate sector mapping for the Traveller role-playing game.</p>
-                </div>
-                <button class="primary word-btn" onclick="window.location.href='#'">View Repository</button>
-            </div>
-
-            <div class="footer-block project-card">
-                <div>
-                    <h2>Programming Sandbox</h2>
-                    <p>A live environment for testing out new scripts, programming language explorations, and managing various backend technology workflows.</p>
-                </div>
-                <button class="secondary" onclick="window.location.href='#'">Browse Code</button>
-            </div>
-
+            <button class="primary" onclick="window.location.href='https://trifold.gameportal.win/'">Launch App</button>
         </div>
+        
+        <div class="footer-block project-card">
+            <div>
+                <h2>The X Factor / More Feats!</h2>
+                <p>Two optional tweaks for getting more feats in your player's hands!</p>
+            </div>
+            <button class="primary" target="_blank" onclick="window.location.href='https://homebrewery.naturalcrit.com/share/rS9ggBRGFQz_'">Open HomeBrew</button>
+        </div>
+    </div>
+</div>
+
+<div class="status-section">
+    <h2 class="status-header beta-header">Beta <span>Testing & Feedback</span></h2>
+    <div class="projects-grid">
+        <div class="footer-block project-card">
+            <div>
+                <h2>Initiative Standees (beta)</h2>
+                <p>A web application for generating free-standing (or DM screen tent) printable initiative tracking items for tabletop encounters.</p>
+            </div>
+            <button class="primary" onclick="window.location.href='https://init-tents.gameportal.win/'">Launch App</button>
+        </div>
+    </div>
+</div>
+
+<div class="status-section">
+    <h2 class="status-header dev-header">In Development <span>Active Coding</span></h2>
+    <div class="projects-grid">
+        <div class="footer-block project-card">
+            <div>
+                <h2>Programming Sandbox</h2>
+                <p>A live environment for testing out new scripts, programming language explorations, and managing various backend technology workflows.</p>
+            </div>
+            <button class="secondary" onclick="window.location.href='#'">Browse Code</button>
+        </div>
+    </div>
+</div>
+
+<div class="status-section">
+    <h2 class="status-header plan-header">In Planning <span>Ideation & Roadmap</span></h2>
+    <div class="projects-grid">
+        <div class="footer-block project-card">
+            <div>
+                <h2>Traveller 5e Toolkit</h2>
+                <p>A suite of utilities and scripts designed to streamline character creation and automate sector mapping for the Traveller role-playing game.</p>
+            </div>
+            <button class="primary word-btn" onclick="window.location.href='#'">View Repository</button>
+        </div>
+    </div>
+</div>
 <!-- <div class="subcards-section">
     <h3>Connect</h3>
     <div class="subcard-grid">
