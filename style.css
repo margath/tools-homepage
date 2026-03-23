@@ -622,6 +622,16 @@ select {
     clip-path: polygon(0 0, 100% 100%, 0 100%);
     border-bottom-left-radius: 6px; /* Softens the sharp folded tip */
 }
+/* PDF Button Styling */
+button.primary.pdf-btn { 
+    background: #c0392b; 
+    font-size: 14px; 
+    padding: 10px;
+}
+
+button.primary.pdf-btn:hover { 
+    background: #922b21; 
+}
 
 /* Print Settings */
 @media print {
